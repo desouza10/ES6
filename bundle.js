@@ -1,23 +1,24 @@
 "use strict";
 
-var arr = [2, 4, 6, 8, 10]; //array.map -> Lê o todo array
+var arr = [1, 2, 3, 4, 5]; //forma comum
 
-var newArr = arr.map(function (item) {
-  return item;
+var comum = arr.map(function (item) {
+  return item * 2;
 });
-console.log(newArr); //arr.reduce -> usado para encontrar um valor cumulativo ou concatenado com base em elementos de todo o array.
+console.log(semFunction); //Com arrow functions, funcções anonimas, podemos retirar o "function" e passar "=>" depois do parâmetro
 
-var sum = arr.reduce(function (total, index) {
-  return total + index;
+var semFunction = arr.map(function (item) {
+  return item * 2;
 });
-console.log(sum); //é preciso remover elementos indesejados com base em alguma(s) condição(ões).
+console.log(semFunction); //ou sem parenteses ao informar o parametro
 
-var filter = arr.filter(function (item) {
-  return item % 2 === 0;
+var sempParenteses = arr.map(function (item) {
+  return item * 2;
 });
-console.log(filter); //retorna o valor do primeiro elemento do array que satisfizer a função de teste provida. Caso contrario, undefined é retornado.
+console.log(sempParenteses); //ou sem o return, dentro da função... Passando direto nesta sintaxe
+//param    funcion    return
 
-var find = arr.find(function (item) {
-  item === 4;
+var semReturn = arr.map(function (item) {
+  return item * 2;
 });
-console.log(find);
+console.log(semReturn);

@@ -1,25 +1,24 @@
-const arr = [2, 4, 6, 8, 10];
+const arr = [1, 2, 3, 4, 5];
 
-//array.map -> Lê o todo array
-const newArr = arr.map(function(item) {
-  return item;
+//forma comum
+const comum = arr.map(function(item) {
+  return item * 2;
 });
-console.log(newArr);
+console.log(semFunction);
 
-//arr.reduce -> usado para encontrar um valor cumulativo ou concatenado com base em elementos de todo o array.
-const sum = arr.reduce(function(total, index) {
-  return total + index;
+//Com arrow functions, funcções anonimas, podemos retirar o "function" e passar "=>" depois do parâmetro
+const semFunction = arr.map(item => {
+  return item * 2;
 });
-console.log(sum);
+console.log(semFunction);
 
-//é preciso remover elementos indesejados com base em alguma(s) condição(ões).
-const filter = arr.filter(function(item) {
-  return item % 2 === 0;
+//ou sem parenteses ao informar o parametro
+const sempParenteses = arr.map(item => {
+  return item * 2;
 });
-console.log(filter);
+console.log(sempParenteses);
 
-//retorna o valor do primeiro elemento do array que satisfizer a função de teste provida. Caso contrario, undefined é retornado.
-const find = arr.find(function(item) {
-  item === 4;
-});
-console.log(find);
+//ou sem o return, dentro da função... Passando direto nesta sintaxe
+//param    funcion    return
+const semReturn = arr.map(item => item * 2);
+console.log(semReturn);
