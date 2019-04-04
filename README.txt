@@ -32,3 +32,4 @@ yarn init
 yarn add @babel/cli
 yarn add @babel/preset-env -> Qual o ambiente utilizado no momento para converter as feats do ES6 num JS para qual o nav leia
 yarn add @babel/core 
+yarn add @babel/plugin-proposal-object-rest-spread
