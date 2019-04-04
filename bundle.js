@@ -1,24 +1,31 @@
 "use strict";
 
-var arr = [1, 2, 3, 4, 5]; //forma comum
+var usuario = {
+  nome: "Fulano",
+  idade: "20",
+  endereco: {
+    cidade: "São Paulo",
+    estado: "SP"
+  }
+}; //Esta forma é muito verbosa, podemos usar desestruturação.
+// const nome = usuario.nome;
+// const idade = usuario.idade;
+// const cidade = usuario.endereco.cidade;
 
-var comum = arr.map(function (item) {
-  return item * 2;
-});
-console.log(semFunction); //Com arrow functions, funcções anonimas, podemos retirar o "function" e passar "=>" depois do parâmetro
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome);
+console.log(idade);
+console.log(cidade); //ou podemos usar dentro de uma function()
+//criamos a function de leitura, esperando por parâmetro um array de dados, que deve ser o que queremos ler no objeto esperado
 
-var semFunction = arr.map(function (item) {
-  return item * 2;
-});
-console.log(semFunction); //ou sem parenteses ao informar o parametro
+function mostrarUsuario(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade,
+      cidade = _ref.endereco.cidade;
+  console.log(nome, idade, cidade);
+} //chamamos a function passando o objeto que queremos ler por parâmetro
 
-var sempParenteses = arr.map(function (item) {
-  return item * 2;
-});
-console.log(sempParenteses); //ou sem o return, dentro da função... Passando direto nesta sintaxe
-//param    funcion    return
 
-var semReturn = arr.map(function (item) {
-  return item * 2;
-});
-console.log(semReturn);
+mostrarUsuario(usuario);
