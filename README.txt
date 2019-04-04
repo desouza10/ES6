@@ -6,7 +6,7 @@ Versões: ESC = Ano + 1... Ex: ES2015 -> ESC6, ES2016 -> ESC7, ES2017 -> ESC8
 
 BABEL: Pega o códgo mais atualizado nas novas funcionalidades e converte num código, qual todos os navegadores entendam. Reescrevendo o código JS.
 
-Webpack: Servidor de desenvolvimento com o conceito de LiveReload, onde atualiza o navegador e ativa o Babel no momento em que o nosso codigo é alterado.
+Webpack: Servidor de desenvolvimento com o conceito de LiveReload, onde atualiza o navegador e ativa o Babel no momento em que o nosso codigo é alterado e também permite que possamos realizar import e export de código JS.
 
 Classes:
 
